@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | feedandfood.biz</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>feedandfood.biz | Premium Animal Nutrition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-green: #2d5a27;
-            --accent-orange: #e67e22;
-            --soft-white: #fdfaf6;
-            --text-dark: #333;
+            --nature-green: #4a7c44;
+            --earth-brown: #6d4c41;
+            --warm-cream: #f9f7f2;
+            --text-main: #2c3e50;
         }
 
         * {
@@ -20,115 +20,135 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--soft-white);
-            color: var(--text-dark);
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--warm-cream);
+            color: var(--text-main);
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
             text-align: center;
-            overflow: hidden;
         }
 
-        /* Simple background pattern */
-        body::before {
+        /* Subtle background pattern (Paw/Grain concept) */
+        body::after {
             content: "";
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0.05;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20S-10 18.954-10 30s8.954 20 20 20 20-8.954 20-20z' fill='%232d5a27' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 4c-4.42 0-8 3.58-8 8h16c0-4.42-3.58-8-8-8z' fill='%236d4c41' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
             z-index: -1;
         }
 
-        .container {
-            max-width: 600px;
-            padding: 2rem;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: var(--primary-green);
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            color: #555;
+        .content-box {
+            max-width: 650px;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            backdrop-filter: blur(5px);
         }
 
         .badge {
-            display: inline-block;
-            background: var(--accent-orange);
+            background-color: var(--nature-green);
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
             font-weight: bold;
-            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1.5rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            display: inline-block;
         }
 
-        .form-container {
+        h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 3rem;
+            color: var(--earth-brown);
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #5d6d7e;
+        }
+
+        .newsletter {
             display: flex;
             gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (min-width: 480px) {
+            .newsletter { flex-direction: row; justify-content: center; }
         }
 
         input[type="email"] {
-            padding: 12px 20px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            width: 300px;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 300px;
+            font-size: 1rem;
             outline: none;
-            transition: border-color 0.3s;
+            transition: 0.3s;
         }
 
         input[type="email"]:focus {
-            border-color: var(--primary-green);
+            border-color: var(--nature-green);
         }
 
         button {
-            padding: 12px 25px;
-            background-color: var(--primary-green);
+            padding: 15px 30px;
+            background-color: var(--earth-brown);
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 12px;
             cursor: pointer;
-            font-weight: bold;
-            transition: opacity 0.3s;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.2s, background-color 0.3s;
         }
 
         button:hover {
-            opacity: 0.9;
+            background-color: var(--nature-green);
+            transform: translateY(-2px);
         }
 
         footer {
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            color: #888;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #95a5a6;
+        }
+
+        .tagline {
+            font-weight: bold;
+            color: var(--nature-green);
+            margin-top: 10px;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="badge">Coming Soon</div>
+    <div class="content-box">
+        <div class="badge">Nourishing the Future</div>
         <h1>feedandfood.biz</h1>
-        <p>We're currently growing something fresh. From the farm to the table, we're redefining how you connect with what you eat.</p>
-
-        <form class="form-container">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Notify Me</button>
+        <p>We are busy crafting the next generation of <strong>premium animal nutrition</strong>. Whether for pets or livestock, we believe every animal deserves food that fuels health, vitality, and happiness.</p>
+        
+        <form class="newsletter" action="#">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Join the Waitlist</button>
         </form>
 
+        <span class="tagline">Quality ingredients. Healthy animals. Happy lives.</span>
+
         <footer>
-            &copy; 2026 feedandfood.biz | Stay hungry.
+            &copy; 2026 feedandfood.biz | Professional Animal Feed Solutions
         </footer>
     </div>
 
